@@ -1,0 +1,43 @@
+/*faire un blog en somme avec les actualités */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #ffffff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .nav-left,
+header .nav-right {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+header .nav-left li,
+header .nav-right li {
+    margin: 0 15px;
+}
+
+header .nav-left li a,
+header .nav-right li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+.logo {
+    text-align: center;
+}
+
+.logo img {
+    width: 3cm;
+    height: auto;
+}

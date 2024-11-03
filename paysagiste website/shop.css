@@ -1,0 +1,179 @@
+/* Conteneur des catégories */
+/* Conteneur des catégories */
+.categories-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch; /* Les cartes auront la même hauteur */
+    padding: 20px;
+    margin-top: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+/* Carte de catégorie individuelle */
+.category-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 30%;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    display: flex;
+    flex-direction: column; /* Alignement vertical du contenu */
+    justify-content: space-between; /* Espace entre les éléments de la carte */
+    height: 350px; /* Hauteur fixe pour uniformiser la taille des cartes */
+}
+
+/* Image des catégories */
+.category-card img {
+    width: 100%;
+    height: 200px; /* Hauteur fixe des images pour uniformiser leur taille */
+    object-fit: cover; /* Recadre l'image tout en conservant son aspect */
+    border-radius: 8px 8px 0 0; /* Arrondi les coins supérieurs uniquement */
+}
+
+
+
+
+.category-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsiveness for smaller screens */
+@media (max-width: 768px) {
+    .categories-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .category-card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+/* Icone panier avec Boxicon */
+.cart i {
+    font-size: 24px;
+    color: black;
+    transition: color 0.3s ease;
+}
+
+.cart i:hover {
+    color: #f0a500;
+}
+
+/* Rappel de la DA pour le reste */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #fffcfc;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+}
+
+header .nav-left,
+header .nav-right {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+header .nav-left li,
+header .nav-right li {
+    margin: 0 15px;
+}
+
+header .nav-left li a,
+header .nav-right li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header .nav-left li a:hover,
+header .nav-right li a:hover {
+    color: #f0a500;
+}
+
+.logo img {
+    width: 60px;
+    height: auto;
+}
+
+/* Footer */
+footer {
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666;
+}
+
+/* Conteneur des articles */
+.articles-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* Carte d'article individuelle */
+.article {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.article img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+}
+
+.article h4 {
+    font-size: 20px;
+    margin: 15px 0;
+}
+
+.article p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.article span {
+    font-size: 14px;
+    color: #999;
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+}
+
+/* Effet de survol sur les articles */
+.article:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
