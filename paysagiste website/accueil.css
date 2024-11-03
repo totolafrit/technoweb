@@ -13,6 +13,11 @@ header {
     align-items: center;
 }
 
+/* Ajustement du logo et de la navigation */
+.logo img {
+    max-height: 60px; /* Ajuster la taille du logo */
+}
+
 .nav-menu {
     display: flex;
     list-style-type: none;
@@ -24,10 +29,18 @@ header {
     margin: 0 15px;
 }
 
+/* Espacement des liens de navigation */
 .nav-menu li a {
     text-decoration: none;
     color: black;
     font-weight: bold;
+    padding: 5px 10px; /* Ajoute du padding autour des liens */
+    border-radius: 5px; /* Coins arrondis */
+    transition: background-color 0.3s; /* Transition pour le changement de couleur de fond */
+}
+
+.nav-menu li a:hover {
+    background-color: #f0f0f0; /* Couleur de fond au survol */
 }
 
 /* Style de la photo principale comme une bannière */
