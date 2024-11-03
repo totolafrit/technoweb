@@ -1,11 +1,9 @@
 /* Conteneur des catégories */
-/* Conteneur des catégories */
 .categories-container {
     display: flex;
     justify-content: space-between;
     align-items: stretch; /* Les cartes auront la même hauteur */
     padding: 20px;
-    margin-top: 20px;
     max-width: 1200px;
     margin: 20px auto;
 }
@@ -35,15 +33,12 @@
     border-radius: 8px 8px 0 0; /* Arrondi les coins supérieurs uniquement */
 }
 
-
-
-
 .category-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* Responsiveness for smaller screens */
+/* Réactivité pour les écrans plus petits */
 @media (max-width: 768px) {
     .categories-container {
         flex-direction: column;
@@ -67,7 +62,7 @@
     color: #f0a500;
 }
 
-/* Rappel de la DA pour le reste */
+/* Style de base */
 body {
     font-family: Arial, sans-serif;
     background-color: #ffffff;
@@ -75,6 +70,7 @@ body {
     padding: 0;
 }
 
+/* En-tête */
 header {
     background-color: #fffcfc;
     padding: 10px 20px;
@@ -84,38 +80,35 @@ header {
     border-bottom: 1px solid #ddd;
 }
 
-header .nav-left,
-header .nav-right {
+.logo img {
+    width: 60px;
+    height: auto;
+}
+
+.nav-menu {
     display: flex;
     list-style-type: none;
     padding: 0;
     margin: 0;
+    gap: 20px;
 }
 
-header .nav-left li,
-header .nav-right li {
-    margin: 0 15px;
+.nav-menu li {
+    list-style: none;
 }
 
-header .nav-left li a,
-header .nav-right li a {
+.nav-menu li a {
     text-decoration: none;
     color: black;
     font-weight: bold;
     transition: color 0.3s ease;
 }
 
-header .nav-left li a:hover,
-header .nav-right li a:hover {
+.nav-menu li a:hover {
     color: #f0a500;
 }
 
-.logo img {
-    width: 60px;
-    height: auto;
-}
-
-/* Footer */
+/* Pied de page */
 footer {
     background-color: #f1f1f1;
     text-align: center;
@@ -124,56 +117,4 @@ footer {
     margin-top: 20px;
     font-size: 14px;
     color: #666;
-}
-
-/* Conteneur des articles */
-.articles-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    padding: 20px;
-    margin-top: 20px;
-}
-
-/* Carte d'article individuelle */
-.article {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 15px;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    position: relative;
-}
-
-.article img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 8px 8px 0 0;
-}
-
-.article h4 {
-    font-size: 20px;
-    margin: 15px 0;
-}
-
-.article p {
-    font-size: 16px;
-    color: #666;
-    margin-bottom: 10px;
-}
-
-.article span {
-    font-size: 14px;
-    color: #999;
-    position: absolute;
-    bottom: 15px;
-    left: 15px;
-}
-
-/* Effet de survol sur les articles */
-.article:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
